@@ -30,6 +30,7 @@ img{
 }
 .img-showcase img{
   min-width: 100%;
+  border-radius: 10px;
 }
 .img-select{
   display: flex;
