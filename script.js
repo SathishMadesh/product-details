@@ -1,24 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Fetch product data when the page loads
+  
   fetchProductData();
 
   const addToCartBtn = document.querySelector('.btn');
   const messageDiv = document.querySelector('.msg');
 
   addToCartBtn.addEventListener('click', function () {
-    // Get selected color
     const selectedColor = document.querySelector('.color-option.selected');
     const color = selectedColor ? selectedColor.dataset.color : 'No color selected';
 
-    // Get selected size
     const selectedSize = document.querySelector('.size-option-radio:checked');
     const size = selectedSize ? selectedSize.value : 'No size selected';
 
     const productTitle = document.querySelector('.product-title').textContent;
 
-    // Display message
     messageDiv.textContent = `${productTitle} Color ${color}, Size ${size} is added to cart`;
-    messageDiv.style.display = 'block'; // Show the message div
+    messageDiv.style.display = 'block'; 
   });
 
   // Function to fetch product data from the API
